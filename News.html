@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events - St. Augustines College</title>
+    <link rel="stylesheet" href="News.css">
+    <link rel="stylesheet" href="uniform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Assets/Images/logo.PNG">
+                <h1>St. Augustines College</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>News & Events</h1>
+        </section>
+
+        <section class="news-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="upcoming">Upcoming Events</button>
+            <button class="filter-btn" data-filter="past">Past Events</button>
+            <button class="filter-btn" data-filter="announcements">Announcements</button>
+        </section>
+
+        <section class="news-container">
+            <!-- Upcoming Events -->
+            <div class="news-item" data-category="upcoming">
+                <div class="news-image">
+                    <img src="https://source.unsplash.com/random/800x600 <boltAction type="file" filePath="news.html">
+                    <img src="https://source.unsplash.com/random/800x600?event" alt="Sports Day">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">March 15, 2024</div>
+                    <h3>Annual Sports Day</h3>
+                    <p>Join us for our annual sports day celebration featuring track and field events, team sports, and more.</p>
+                    <div class="event-details">
+                        <p><i class="fas fa-clock"></i> 9:00 AM - 4:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> School Sports Ground</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item" data-category="upcoming">
+                <div class="news-image">
+                    <img src="https://source.unsplash.com/random/800x600?graduation" alt="Graduation">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">April 5, 2024</div>
+                    <h3>Graduation Ceremony</h3>
+                    <p>Celebrating the achievements of our graduating class of 2024.</p>
+                    <div class="event-details">
+                        <p><i class="fas fa-clock"></i> 2:00 PM - 5:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> School Auditorium</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Events -->
+            <div class="news-item" data-category="past">
+                <div class="news-image">
+                    <img src="https://source.unsplash.com/random/800x600?science-fair" alt="Science Fair">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">January 05, 2025</div>
+                    <h3>Science Fair 2025</h3>
+                    <p>Students showcased their innovative science projects and experiments.</p>
+                    <a href="#" class="read-more">View Gallery</a>
+                </div>
+            </div>
+
+            <div class="news-item" data-category="past">
+                <div class="news-image">
+                    <img src="https://source.unsplash.com/random/800x600?concert" alt="Annual Day">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">January 19, 2025</div>
+                    <h3>Annual Cultural Day</h3>
+                    <p>A spectacular showcase of talent through music, dance, and drama performances.</p>
+                    <a href="#" class="read-more">View Gallery</a>
+                </div>
+            </div>
+
+            <!-- Announcements -->
+            <div class="news-item" data-category="announcements">
+                <div class="news-content announcement">
+                    <div class="news-date">January 28, 2025</div>
+                    <h3>Admission Open for 2025-26</h3>
+                    <p>Applications are now being accepted for the new academic year. Limited seats available.</p>
+                    <a href="admissions.html" class="cta-button">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="news-item" data-category="announcements">
+                <div class="news-content announcement">
+                    <div class="news-date">February 5, 2025</div>
+                    <h3>Parent-Teacher Meeting</h3>
+                    <p>Schedule for the upcoming parent-teacher meeting has been released.</p>
+                    <a href="#" class="read-more">View Schedule</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="school-calendar">
+            <h2>School Calendar</h2>
+            <div class="calendar-container">
+                <!-- Calendar will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@staugustines.edu</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 St. Augustines College. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="news.js"></script>
+</body>
+</html>

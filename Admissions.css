@@ -1,0 +1,278 @@
+
+/* Admissions Page Styles */
+body{
+  background-color: var(--light-gray);
+}
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #0d47a1;
+    --accent-color: #ffc107;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --white: aliceblue;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hero Section */
+  .admission-hero {
+    background: linear-gradient(rgba(26, 35, 126, 0.9), rgba(26, 35, 126, 0.9)),
+                url('https://source.unsplash.com/random/1920x1080?school') center/cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  /* Downloads Section */
+  .downloads-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .download-card {
+    background: aliceblue;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .download-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .download-icon i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* Process Timeline */
+  /* Process Timeline */
+.process-timeline {
+  max-width: 800px; /* Fixed issue: added 'px' */
+  width: 100%; /* Ensures it doesn't overflow */
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box; /* Prevents overflow due to padding */
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+  .process-timeline {
+      padding: 0 10px; /* Reduce padding on smaller screens */
+      margin: 20px auto; /* Reduce margin for compact view */
+  }
+}
+
+  
+  .process-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .process-step::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 60px;
+    bottom: -40px;
+    width: 2px;
+    background: var(--primary-color);
+  }
+  
+  .process-step:last-child::before {
+    display: none;
+  }
+  
+  .step-icon {
+    background: var(--primary-color);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  
+  .step-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    flex-grow: 1;
+  }
+  
+  /* Requirements Section */
+  .requirements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .requirements-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  
+  .requirements-card h3 i {
+    color: var(--primary-color);
+    margin-right: 10px;
+  }
+  
+  .requirements-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .requirements-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  /* Application Form */
+  .application-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .file-upload {
+    position: relative;
+  }
+  
+  .file-upload label {
+    display: block;
+    padding: 15px;
+    background: var(--light-gray);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .file-upload input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+  .submit-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .admission-hero {
+      padding: 60px 20px;
+    }
+  
+    .process-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .process-step::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .step-icon {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .application-container {
+      padding: 20px;
+    }
+    
+  }
