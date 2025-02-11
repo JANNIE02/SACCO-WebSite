@@ -63,7 +63,7 @@ body{
   .download-btn {
     display: inline-block;
     padding: 10px 20px;
-    background: var(--primary-color);
+    background:#ffc107 ;
     color: var(--white);
     border-radius: 5px;
     text-decoration: none;

@@ -123,10 +123,6 @@
         </div>
     </div>
 </section>
-
-
-
-
 </main>
 <footer>
     <div class="footer">
@@ -156,5 +152,16 @@
         <p>&copy; 2025 St. Augustines College. All rights reserved.</p>
     </div>
 </footer>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+    
+        hamburger.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    });
+    </script>
+    
 </body>
+ </html>

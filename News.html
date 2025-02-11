@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News & Events - St. Augustines College</title>
+    <title>News & Events - St. Augustines College Wakiso</title>
     <link rel="stylesheet" href="News.css">
     <link rel="stylesheet" href="uniform.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,8 +12,8 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="Assets/Images/logo.PNG">
-                <h1>St. Augustines College</h1>
+                <img src="Assets/Images/logo.PNG" alt="logo">
+                <h1>St. Augustines College Wakiso</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -48,8 +48,8 @@
             <!-- Upcoming Events -->
             <div class="news-item" data-category="upcoming">
                 <div class="news-image">
-                    <img src="https://source.unsplash.com/random/800x600 <boltAction type="file" filePath="news.html">
-                    <img src="https://source.unsplash.com/random/800x600?event" alt="Sports Day">
+                    <img src="Assets/Images/Soccer Team.jpg"  filepath="news.html">
+                    <img src="" alt="Sports Day">
                 </div>
                 <div class="news-content">
                     <div class="news-date">March 15, 2024</div>
@@ -64,7 +64,7 @@
 
             <div class="news-item" data-category="upcoming">
                 <div class="news-image">
-                    <img src="https://source.unsplash.com/random/800x600?graduation" alt="Graduation">
+                    <img src="Assets/Images/School event.jpg" alt="Graduation">
                 </div>
                 <div class="news-content">
                     <div class="news-date">April 5, 2024</div>
@@ -80,7 +80,7 @@
             <!-- Past Events -->
             <div class="news-item" data-category="past">
                 <div class="news-image">
-                    <img src="https://source.unsplash.com/random/800x600?science-fair" alt="Science Fair">
+                    <img src="Assets/Images/A level Science students.jpg" alt="Science Fair">
                 </div>
                 <div class="news-content">
                     <div class="news-date">January 05, 2025</div>
@@ -92,7 +92,7 @@
 
             <div class="news-item" data-category="past">
                 <div class="news-image">
-                    <img src="https://source.unsplash.com/random/800x600?concert" alt="Annual Day">
+                    <img src="Assets/Images/A `.jpg" alt="Annual Day">
                 </div>
                 <div class="news-content">
                     <div class="news-date">January 19, 2025</div>
@@ -104,6 +104,9 @@
 
             <!-- Announcements -->
             <div class="news-item" data-category="announcements">
+                <Div class="announcement-image">
+                    <img src="Assets/Images/admission add.png" alt="admission">
+                </Div>
                 <div class="news-content announcement">
                     <div class="news-date">January 28, 2025</div>
                     <h3>Admission Open for 2025-26</h3>
@@ -111,10 +114,13 @@
                     <a href="admissions.html" class="cta-button">Apply Now</a>
                 </div>
             </div>
-
+            
             <div class="news-item" data-category="announcements">
+                <Div class="announcement-image">
+                    <img src="Assets/Images/parent-meeting.jpg" alt="admission">
+                </Div>
                 <div class="news-content announcement">
-                    <div class="news-date">February 5, 2025</div>
+                    <div class="news-date">February 1, 2025</div>
                     <h3>Parent-Teacher Meeting</h3>
                     <p>Schedule for the upcoming parent-teacher meeting has been released.</p>
                     <a href="#" class="read-more">View Schedule</a>
@@ -124,10 +130,9 @@
 
         <section class="school-calendar">
             <h2>School Calendar</h2>
-            <div class="calendar-container">
-                <!-- Calendar will be populated by JavaScript -->
-            </div>
+            <div class="calendar-container" id="calendar"></div>
         </section>
+        
     </main>
 
     <footer>
@@ -158,7 +163,6 @@
             <p>&copy; 2025 St. Augustines College. All rights reserved.</p>
         </div>
     </footer>
-    
 
     <script src="news.js"></script>
 </body>
