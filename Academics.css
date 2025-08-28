@@ -8,19 +8,529 @@ body{
     --accent-color: #ffc107;
     --text-color: #333;
     --light-gray: #f5f5f5;
-    --white:aliceblue;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Level Tabs */
-  .level-tabs {
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Academic Hero Section */
+.academic-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Assets/Images/academic-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 60px;
+}
+
+.academic-hero .hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.academic-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.academic-hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s;
+}
+
+/* Programs Overview Section */
+.programs-overview {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.programs-overview h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.program-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+.program-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.program-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.program-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.program-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.program-features li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.program-features i {
+    color: var(--accent-color);
+}
+
+/* Academic Achievements Section */
+.academic-achievements {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.academic-achievements h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.achievement-card {
+    background: var(--light-gray);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.achievement-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.achievement-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.achievement-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Academic Facilities Section */
+.academic-facilities {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.academic-facilities h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.facility-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.facility-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.facility-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+/* Academic Calendar Section */
+.academic-calendar {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.academic-calendar h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.calendar-card {
+    background: var(--light-gray);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+.calendar-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.calendar-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.calendar-card li {
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .academic-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .academic-hero p {
+        font-size: 1.2rem;
+    }
+
+    .programs-grid,
+    .achievements-grid,
+    .facilities-grid,
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Section Transitions */
+.program-card,
+.achievement-card,
+.facility-card,
+.calendar-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Level Tabs */
+.level-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.tab-btn {
+  padding: 12px 30px;
+  border: none;
+  background: var(--light-gray);
+  color: var(--text-color);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* Subjects Grid */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.subject-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+}
+
+.subject-card i {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.subject-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subject-card ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+/* Co-curricular Activities */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.activity-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card h3 {
+    padding: 20px;
+    margin: 0;
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.activity-card ul {
+    padding: 20px;
+    list-style: none;
+}
+
+.activity-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+/* Default navigation for large screens */
+.nav-links {
+    display: flex;  /* Always visible on large screens */
+    list-style: none;
+    gap: 20px;
+}
+
+/* Hide the menu on small screens initially */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;  /* Hide by default on small screens */
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;  /* Show when clicked */
+    }
+
+    .hamburger {
+        display: flex;  /* Show hamburger only on small screens */
+        flex-direction: column;
+        cursor: pointer;
+    }
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.image-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.caption {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+td select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Results Tabs */
+.results-tabs {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 40px 0;
-  }
-  
-  .tab-btn {
+    margin-bottom: 30px;
+}
+
+.results-tab {
     padding: 12px 30px;
     border: none;
     background: var(--light-gray);
@@ -28,99 +538,263 @@ body{
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .tab-btn.active {
+    font-weight: 500;
+}
+
+.results-tab.active {
     background: var(--primary-color);
     color: var(--white);
-  }
-  
-  /* Subjects Grid */
-  .subjects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 40px 20px;
-  }
-  
-  .subject-card {
+}
+
+.results-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.results-content.active {
+    display: block;
+}
+
+/* Student Performance Section */
+.student-performance {
+    padding: 80px 0;
     background: var(--white);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-  }
-  
-  .subject-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .subject-card i {
-    font-size: 2.5em;
+}
+
+.student-performance h2 {
+    text-align: center;
     color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.student-performance h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.performance-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.performance-tab {
+    padding: 12px 30px;
+    border: none;
+    background: var(--light-gray);
+    color: var(--text-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.performance-tab.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.performance-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.performance-content.active {
+    display: block;
+}
+
+.performance-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.performance-header h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
     margin-bottom: 20px;
-  }
-  
-  .subject-card ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .subject-card ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--light-gray);
-  }
-  
-  /* Co-curricular Activities */
-  .activities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.performance-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.students-grid {
+    display: flex;
+    flex-wrap: nowrap;
     gap: 30px;
-    padding: 40px 20px;
-  }
-  
-  .activity-card {
+    padding: 20px 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--light-gray);
+}
+
+.students-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.students-grid::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+
+.students-grid::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.student-card {
+    flex: 0 0 300px;
     background: var(--white);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow);
-  }
-  
-  .activity-card img {
+    transition: all 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.student-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.student-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-  }
-  
-  .activity-card h3 {
-    padding: 20px;
-    margin: 0;
+    transition: transform 0.5s ease;
+}
+
+.student-card:hover .student-image img {
+    transform: scale(1.1);
+}
+
+.achievement-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.student-info {
+    padding: 25px;
+}
+
+.student-info h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+}
+
+.student-grade {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.subject-grades {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.grade {
+    width: 30px;
+    height: 30px;
     background: var(--primary-color);
     color: var(--white);
-  }
-  
-  .activity-card ul {
-    padding: 20px;
-    list-style: none;
-  }
-  
-  .activity-card ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--light-gray);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .level-tabs {
-      flex-direction: column;
-      align-items: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.student-subjects {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .performance-tabs {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .tab-btn {
-      width: 80%;
+
+    .performance-tab {
+        width: 80%;
+        text-align: center;
     }
-    
-    .subjects-grid {
-      grid-template-columns: 1fr;
+
+    .performance-stats {
+        flex-direction: column;
+        gap: 20px;
     }
-  }
+
+    .students-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-image {
+        height: 200px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

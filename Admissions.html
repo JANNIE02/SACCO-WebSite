@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Admissions.css">
     <link rel="stylesheet" href="uniform.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Assets/Images/logo.PNG">
+
 </head>
 <body>
     <header>
@@ -101,7 +103,7 @@
                     </div>
                     <div class="step-content">
                         <h3>2.Payment of Application fee</h3>
-                        <p>An application fee of UGX 30,000/= payable to A/C Number: 3100015152 Centenary Bank is required. </p>
+                        <p>An application fee of UGX 50,000/= payable to A/C Number: 3100015152 Centenary Bank is required. </p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -177,7 +179,7 @@
         <div class="footer">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-phone"></i>+256 414 372593</p>
                 <p><i class="fas fa-envelope"></i> info@staugustines.edu</p>
             </div>
             <div class="footer-section">
@@ -205,5 +207,21 @@
 
     <script src="script.js"></script>
     <script src="admissions.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById("hamburgerMenu");
+        const navMenu = document.getElementById("navMenu");
+    
+        hamburger.addEventListener("click", function() {
+            navMenu.classList.toggle("show"); // Toggles the menu visibility
+        });
+    
+        // Ensure menu closes when clicking outside (optional)
+        document.addEventListener("click", function(event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove("show");
+            }
+        });
+    });
+    </script>
 </body>
 </html>

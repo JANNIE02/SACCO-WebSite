@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Academics.css">
     <link rel="stylesheet" href="uniform.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Assets/Images/logo.PNG">
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@
                 <img src="Assets/Images/logo.PNG">
                 <h1>St. Augustines College Wakiso</h1>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navMenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="academics.html" class="active">Academics</a></li>
@@ -24,7 +25,7 @@
                 <li><a href="news.html">News</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger"  id="hamburgerMenu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -124,12 +125,237 @@
                 </div>
             </div>
         </section>
+        <section class="results-section">
+            <div class="results-tabs">
+                <button class="results-tab active" data-target="uce-2024">UCE 2024</button>
+                <button class="results-tab" data-target="uace-2024">UACE 2024</button>
+            </div>
+
+            <div class="results-content active" data-content="uce-2024">
+                <h2>UCE 2024 Results</h2>
+                <div class="results-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>C</th>
+                                <th>D</th>
+                                <th>E</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>English</td><td>20</td><td>72</td><td>83</td><td>4</td></tr>
+                            <tr><td>CRE</td><td>9</td><td>94</td><td>73</td><td>3</td></tr>
+                            <tr><td>History</td><td>35</td><td>90</td><td>53</td><td>1</td></tr>
+                            <tr><td>Geography</td><td>24</td><td>101</td><td>50</td><td>4</td></tr>
+                            <tr><td>Luganda</td><td>1</td><td>6</td><td>3</td><td>3</td></tr>
+                            <tr><td>French</td><td>1</td><td>5</td><td>4</td><td>2</td></tr>
+                            <tr><td>Kiswahili</td><td>0</td><td>3</td><td>18</td><td>4</td></tr>
+                            <tr><td>Math</td><td>18</td><td>62</td><td>53</td><td>46</td></tr>
+                            <tr><td>Physics</td><td>3</td><td>104</td><td>47</td><td>25</td></tr>
+                            <tr><td>Chemistry</td><td>4</td><td>82</td><td>72</td><td>20</td><td>1</td></tr>
+                            <tr><td>Biology</td><td>1</td><td>64</td><td>104</td><td>10</td></tr>
+                            <tr><td>ENT</td><td>6</td><td>20</td><td>33</td><td>9</td><td>1</td></tr>
+                            <tr><td>Art</td><td>18</td><td>4</td></tr>
+                            <tr><td>N & FT</td><td>0</td><td>19</td><td>12</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="results-content" id="uace-2024">
+                <h2>UACE 2024 Results</h2>
+                <div class="results-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>C</th>
+                                <th>D</th>
+                                <th>E</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Mathematics</td><td>15</td><td>25</td><td>30</td><td>20</td><td>10</td></tr>
+                            <tr><td>Physics</td><td>12</td><td>28</td><td>35</td><td>15</td><td>10</td></tr>
+                            <tr><td>Chemistry</td><td>10</td><td>30</td><td>40</td><td>15</td><td>5</td></tr>
+                            <tr><td>Biology</td><td>8</td><td>32</td><td>38</td><td>18</td><td>4</td></tr>
+                            <tr><td>Economics</td><td>20</td><td>35</td><td>25</td><td>15</td><td>5</td></tr>
+                            <tr><td>History</td><td>15</td><td>30</td><td>35</td><td>15</td><td>5</td></tr>
+                            <tr><td>Geography</td><td>18</td><td>32</td><td>30</td><td>15</td><td>5</td></tr>
+                            <tr><td>Entrepreneurship</td><td>25</td><td>35</td><td>25</td><td>10</td><td>5</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="student-performance">
+            <h2>Outstanding Student Performance</h2>
+            <div class="performance-tabs">
+                <button class="performance-tab active" data-target="uce-performers">UCE Top Performers</button>
+                <button class="performance-tab" data-target="uace-performers">UACE Top Performers</button>
+            </div>
+
+            <div class="performance-content active" data-content="uce-performers">
+                <div class="performance-header">
+                    <h3>UCE 2024 Top Performers</h3>
+                    <div class="performance-stats">
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Pass Rate</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">45%</span>
+                            <span class="stat-label">First Grades</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="students-grid">
+                    <div class="student-card">
+                        <div class="student-image">
+                            <img src="https://via.placeholder.com/400x500?text=Student+1" alt="John Doe">
+                            <div class="achievement-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                        <div class="student-info">
+                            <h4>John Doe</h4>
+                            <p class="student-grade">Aggregate 8</p>
+                            <div class="subject-grades">
+                                <span class="grade">A</span>
+                                <span class="grade">A</span>
+                                <span class="grade">A</span>
+                            </div>
+                            <p class="student-subjects">Mathematics, Physics, Chemistry</p>
+                        </div>
+                    </div>
+                    <div class="student-card">
+                        <div class="student-image">
+                            <img src="https://via.placeholder.com/400x500?text=Student+2" alt="Jane Smith">
+                            <div class="achievement-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                        <div class="student-info">
+                            <h4>Jane Smith</h4>
+                            <p class="student-grade">Aggregate 9</p>
+                            <div class="subject-grades">
+                                <span class="grade">A</span>
+                                <span class="grade">A</span>
+                                <span class="grade">B</span>
+                            </div>
+                            <p class="student-subjects">Biology, Chemistry, Mathematics</p>
+                        </div>
+                    </div>
+                    <div class="student-card">
+                        <div class="student-image">
+                            <img src="https://via.placeholder.com/400x500?text=Student+3" alt="Michael Johnson">
+                            <div class="achievement-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                        <div class="student-info">
+                            <h4>Michael Johnson</h4>
+                            <p class="student-grade">Aggregate 10</p>
+                            <div class="subject-grades">
+                                <span class="grade">A</span>
+                                <span class="grade">B</span>
+                                <span class="grade">B</span>
+                            </div>
+                            <p class="student-subjects">Physics, Mathematics, Computer Studies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="performance-content" data-content="uace-performers">
+                <div class="performance-header">
+                    <h3>UACE 2024 Top Performers</h3>
+                    <div class="performance-stats">
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Pass Rate</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label">First Grades</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="students-grid">
+                    <div class="student-card">
+                        <div class="student-image">
+                            <img src="https://via.placeholder.com/400x500?text=Student+4" alt="Sarah Wilson">
+                            <div class="achievement-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                        <div class="student-info">
+                            <h4>Sarah Wilson</h4>
+                            <p class="student-grade">PCM Combination</p>
+                            <div class="subject-grades">
+                                <span class="grade">A</span>
+                                <span class="grade">A</span>
+                                <span class="grade">A</span>
+                            </div>
+                            <p class="student-subjects">Physics, Chemistry, Mathematics</p>
+                        </div>
+                    </div>
+                    <div class="student-card">
+                        <div class="student-image">
+                            <img src="https://via.placeholder.com/400x500?text=Student+5" alt="David Brown">
+                            <div class="achievement-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                        <div class="student-info">
+                            <h4>David Brown</h4>
+                            <p class="student-grade">BCM Combination</p>
+                            <div class="subject-grades">
+                                <span class="grade">A</span>
+                                <span class="grade">A</span>
+                                <span class="grade">B</span>
+                            </div>
+                            <p class="student-subjects">Biology, Chemistry, Mathematics</p>
+                        </div>
+                    </div>
+                    <div class="student-card">
+                        <div class="student-image">
+                            <img src="https://via.placeholder.com/400x500?text=Student+6" alt="Emily Davis">
+                            <div class="achievement-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                        <div class="student-info">
+                            <h4>Emily Davis</h4>
+                            <p class="student-grade">HEG Combination</p>
+                            <div class="subject-grades">
+                                <span class="grade">A</span>
+                                <span class="grade">B</span>
+                                <span class="grade">B</span>
+                            </div>
+                            <p class="student-subjects">History, Economics, Geography</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="cocurricular-section">
             <h2>Co-Curricular Activities</h2>
             <div class="activities-grid">
                 <div class="activity-card">
-                    <img src="Assets/Images/Teacher's Soccer Team.jpg" alt="Sports">
+                    <div class="video-container">
+                        <video class="video-thumbnail" controls>
+                            <source src="Assets/Videos/Teachers Soccer Team.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <h3>Sports</h3>
                     <ul>
                         <li>Football</li>
@@ -138,7 +364,12 @@
                     </ul>
                 </div>
                 <div class="activity-card">
-                    <img src="Assets/Images/MDD.jpg" alt="Arts">
+                    <div class="video-container">
+                        <video class="video-thumbnail" controls>
+                            <source src="Assets/Videos/MDD.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <h3>Arts & Culture</h3>
                     <ul>
                         <li>Drama Club</li>
@@ -148,7 +379,12 @@
                     </ul>
                 </div>
                 <div class="activity-card">
-                    <img src="Assets/Images/A level Science students.jpg" alt="Clubs">
+                    <div class="video-container">
+                        <video class="video-thumbnail" controls>
+                            <source src="Assets/Videos/A level Science students.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <h3>Academic Clubs</h3>
                     <ul>
                         <li>Debate Club</li>
@@ -158,7 +394,12 @@
                     </ul>
                 </div>
                 <div class="activity-card">
-                    <img src="Assets/Images/Function.jpg" alt="Community">
+                    <div class="video-container">
+                        <video class="video-thumbnail" controls>
+                            <source src="Assets/Videos/Function.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <h3>Community Service</h3>
                     <ul>
                         <li>Environmental Club</li>
@@ -175,7 +416,7 @@
         <div class="footer">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-phone"></i> +256 414 372593</p>
                 <p><i class="fas fa-envelope"></i> info@staugustines.edu</p>
             </div>
             <div class="footer-section">
@@ -202,5 +443,21 @@
     
 
     <script src="academics.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById("hamburgerMenu");
+        const navMenu = document.getElementById("navMenu");
+    
+        hamburger.addEventListener("click", function() {
+            navMenu.classList.toggle("show"); // Toggles the menu visibility
+        });
+    
+        // Ensure menu closes when clicking outside (optional)
+        document.addEventListener("click", function(event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove("show");
+            }
+        });
+    });
+    </script
 </body>
 </html>

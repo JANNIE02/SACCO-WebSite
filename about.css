@@ -1,128 +1,209 @@
 /* About Page Styles */
 :root {
-    --primary-color: #1a237e;
-    --secondary-color: #0d47a1;
-    --accent-color: #ffc107;
-    --text-color: #333;
-    --light-gray: #f5f5f5;
-    --white: #ffffff;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Timeline Styles */
-  .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-  }
-  
+  --primary-color: #1a237e;
+  --secondary-color: #0d47a1;
+  --accent-color: #ffc107;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --white: #ffffff;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Mission Section */
+.mission-section {
+  background: var(--light-gray);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mission-content p {
+  font-size: 1.2em;
+  font-style: italic;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.mission-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.value-item {
+  background:#f0f8ff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+}
+
+.value-item i {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Achievements Section */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.achievement-card {
+  background:#f0f8ff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-icon {
+  font-size: 2.5em;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+/* Reasons Grid */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reason-card {
+  background: #f0f8ff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.reason-card:hover {
+  animation: jump 0.6s ease-in-out;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.reason-card i {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.reason-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.reason-card p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-    padding-left: 50px;
-  }
-  
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: var(--primary-color);
+      padding-left: 30px;
   }
   
   .year {
-    position: absolute;
-    left: -80px;
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  
-  /* Mission Section */
-  .mission-section {
-    background: var(--light-gray);
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .mission-content p {
-    font-size: 1.2em;
-    font-style: italic;
-    color: var(--text-color);
-    max-width: 800px;
-    margin: 0 auto 40px;
+      left: -60px;
+      font-size: 0.9em;
   }
   
   .mission-values {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 20px;
-  }
-  
-  .value-item {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-  }
-  
-  .value-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .value-item i {
-    font-size: 2.5em;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-  }
-  
-  /* Achievements Section */
-  .achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 40px 20px;
-  }
-  
-  .achievement-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .achievement-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .achievement-icon {
-    font-size: 2.5em;
-    color: var(--accent-color);
-    margin-bottom: 20px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .timeline-item {
-      padding-left: 30px;
-    }
-    
-    .year {
-      left: -60px;
-      font-size: 0.9em;
-    }
-    
-    .mission-values {
       grid-template-columns: 1fr;
-    }
   }
+
+  .reasons-grid {
+      grid-template-columns: 1fr;
+  }
+}
+.timeline {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 5px solid #333;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    border-width: 5px;
+  }
+  50% {
+    border-width: 10px;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 50px;
+}
+
+.timeline-item h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-item h3 {
+  font-size: 18px;
+  color: #555;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.timeline-item p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Add some hover effects */
+.timeline-item h2:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/*.timeline-item h3:hover {
+  color: #3498db;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-item p:hover {
+  color: #2ecc71;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}/*

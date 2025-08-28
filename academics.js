@@ -104,4 +104,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Results Tabs
+    const resultsTabs = document.querySelectorAll('.results-tab');
+    const resultsContents = document.querySelectorAll('.results-content');
+
+    resultsTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and contents
+            resultsTabs.forEach(t => t.classList.remove('active'));
+            resultsContents.forEach(c => {
+                c.classList.remove('active');
+                c.style.display = 'none';
+            });
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Show corresponding content
+            const target = tab.getAttribute('data-target');
+            const targetContent = document.querySelector(`.results-content[data-content="${target}"]`);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+                targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // Performance Tabs
+    const performanceTabs = document.querySelectorAll('.performance-tab');
+    const performanceContents = document.querySelectorAll('.performance-content');
+
+    performanceTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and contents
+            performanceTabs.forEach(t => t.classList.remove('active'));
+            performanceContents.forEach(c => {
+                c.classList.remove('active');
+                c.style.display = 'none';
+            });
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Show corresponding content
+            const target = tab.getAttribute('data-target');
+            const targetContent = document.querySelector(`.performance-content[data-content="${target}"]`);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+                targetContent.classList.add('active');
+            }
+        });
+    });
 });

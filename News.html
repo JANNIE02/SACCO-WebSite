@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="News.css">
     <link rel="stylesheet" href="uniform.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Assets/Images/logo.PNG">
+    <!-- Add AOS library for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -24,7 +27,7 @@
                 <li><a href="news.html" class="active">News</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+           <div class="hamburger" id="hamburgerMenu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -32,138 +35,383 @@
         </nav>
     </header>
 
-    <main>
-        <section class="page-header">
-            <h1>News & Events</h1>
-        </section>
+  <main>
+    <!-- Page header -->
+    <section class="page-header">
+      <h1>News & Events</h1>
+      <p class="subtitle">Stay updated with the latest happenings at St. Augustines College</p>
+    </section>
 
-        <section class="news-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="upcoming">Upcoming Events</button>
-            <button class="filter-btn" data-filter="past">Past Events</button>
-            <button class="filter-btn" data-filter="announcements">Announcements</button>
-        </section>
+    <!-- Filters -->
+    <section class="news-filters">
+      <button class="filter-btn active" data-filter="upcoming">Upcoming Events</button>
+      <button class="filter-btn" data-filter="past">Past Events</button>
+      <button class="filter-btn" data-filter="announcements">Announcements</button>
+      <button class="filter-btn" data-filter="videos">Videos</button>
+    </section>
 
-        <section class="news-container">
-            <!-- Upcoming Events -->
-            <div class="news-item" data-category="upcoming">
-                <div class="news-image">
-                    <img src="Assets/Images/Soccer Team.jpg"  filepath="news.html">
-                    <img src="" alt="Sports Day">
-                </div>
-                <div class="news-content">
-                    <div class="news-date">March 15, 2024</div>
-                    <h3>Annual Sports Day</h3>
-                    <p>Join us for our annual sports day celebration featuring track and field events, team sports, and more.</p>
-                    <div class="event-details">
-                        <p><i class="fas fa-clock"></i> 9:00 AM - 4:00 PM</p>
-                        <p><i class="fas fa-map-marker-alt"></i> School Sports Ground</p>
-                    </div>
-                </div>
+    <!-- Master grid -->
+    <section class="news-container">
+      <!-- Video Gallery -->
+      <section class="video-gallery" data-section="videos">
+        <h2>Video Gallery</h2>
+
+        <!-- Featured video (full width, not a card) -->
+        <div class="featured-video" data-category="videos" data-aos="fade-up">
+          <div class="video-container">
+            <video id="featuredVideo" controls poster="Assets/Images/video-thumbnail1.jpg">
+              <source src="Assets/Videos/WhatsApp Video 2025-04-04 at 01.56.21_0e97bb8f.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="news-content">
+            <div class="news-date">Latest Video</div>
+            <h3>School Highlights 2024</h3>
+            <p>Watch our latest compilation of memorable moments and achievements throughout the year.</p>
+            <div class="video-meta">
+              <span><i class="fas fa-eye"></i> 1.2K views</span>
+              <span><i class="fas fa-calendar"></i> March 1, 2024</span>
             </div>
+          </div>
+        </div>
 
-            <div class="news-item" data-category="upcoming">
-                <div class="news-image">
-                    <img src="Assets/Images/School event.jpg" alt="Graduation">
-                </div>
-                <div class="news-content">
-                    <div class="news-date">April 5, 2024</div>
-                    <h3>Graduation Ceremony</h3>
-                    <p>Celebrating the achievements of our graduating class of 2024.</p>
-                    <div class="event-details">
-                        <p><i class="fas fa-clock"></i> 2:00 PM - 5:00 PM</p>
-                        <p><i class="fas fa-map-marker-alt"></i> School Auditorium</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Past Events -->
-            <div class="news-item" data-category="past">
-                <div class="news-image">
-                    <img src="Assets/Images/A level Science students.jpg" alt="Science Fair">
-                </div>
-                <div class="news-content">
-                    <div class="news-date">January 05, 2025</div>
-                    <h3>Science Fair 2025</h3>
-                    <p>Students showcased their innovative science projects and experiments.</p>
-                    <a href="#" class="read-more">View Gallery</a>
-                </div>
-            </div>
-
-            <div class="news-item" data-category="past">
-                <div class="news-image">
-                    <img src="Assets/Images/A `.jpg" alt="Annual Day">
-                </div>
-                <div class="news-content">
-                    <div class="news-date">January 19, 2025</div>
-                    <h3>Annual Cultural Day</h3>
-                    <p>A spectacular showcase of talent through music, dance, and drama performances.</p>
-                    <a href="#" class="read-more">View Gallery</a>
-                </div>
-            </div>
-
-            <!-- Announcements -->
-            <div class="news-item" data-category="announcements">
-                <Div class="announcement-image">
-                    <img src="Assets/Images/admission add.png" alt="admission">
-                </Div>
-                <div class="news-content announcement">
-                    <div class="news-date">January 28, 2025</div>
-                    <h3>Admission Open for 2025-26</h3>
-                    <p>Applications are now being accepted for the new academic year. Limited seats available.</p>
-                    <a href="admissions.html" class="cta-button">Apply Now</a>
-                </div>
-            </div>
-            
-            <div class="news-item" data-category="announcements">
-                <Div class="announcement-image">
-                    <img src="Assets/Images/parent-meeting.jpg" alt="admission">
-                </Div>
-                <div class="news-content announcement">
-                    <div class="news-date">February 1, 2025</div>
-                    <h3>Parent-Teacher Meeting</h3>
-                    <p>Schedule for the upcoming parent-teacher meeting has been released.</p>
-                    <a href="#" class="read-more">View Schedule</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="school-calendar">
-            <h2>School Calendar</h2>
-            <div class="calendar-container" id="calendar"></div>
-        </section>
+        <!-- Video cards grid -->
+        <div class="video-grid">
         
-    </main>
+          <div class="video-item" data-category="videos" data-aos="fade-up">
+            <div class="video-thumbnail">
+              <img src="Assets/Images/video-thumbnail1.jpg" alt="Video thumbnail">
+              <div class="play-button" data-video="Assets/Videos/WhatsApp Video 2025-04-04 at 01.56.21_0e97bb8f.mp4">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Sample Video</h3>
+              <p>Celebrating diversity through music and dance</p>
+              <div class="video-meta">
+                <span><i class="fas fa-eye"></i> 2.3K views</span>
+                <span><i class="fas fa-clock"></i> 12:15</span>
+              </div>
+            </div>
+          </div>
+             
+          <div class="video-item" data-category="videos" data-aos="fade-up">
+            <div class="video-thumbnail">
+              <img src="Assets/Images/video-thumbnail1.jpg" alt="Video thumbnail">
+              <div class="play-button" data-video=" Assets/Videos/Visit to the Buganda palace.mp4">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Sample Video</h3>
+              <p>Celebrating diversity through music and dance</p>
+              <div class="video-meta">
+                <span><i class="fas fa-eye"></i> 2.3K views</span>
+                <span><i class="fas fa-clock"></i> 12:15</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="video-item" data-category="videos" data-aos="fade-up">
+            <div class="video-thumbnail">
+              <img src="Assets/Images/WhatsApp Image 2025-04-06 at 22.20.00_7794e964.jpg" alt="Video thumbnail">
+              <div class="play-button" data-video="Assets/Videos/Visit to the Buganda palace.mp4">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Sample Video</h3>
+              <p>Celebrating diversity through music and dance</p>
+              <div class="video-meta">
+                <span><i class="fas fa-eye"></i> 2.3K views</span>
+                <span><i class="fas fa-clock"></i> 12:15</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-        <div class="footer">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-phone"></i> +123 456 7890</p>
-                <p><i class="fas fa-envelope"></i> info@staugustines.edu</p>
+      <!-- Upcoming Events -->
+      <section class="upcoming-events" data-section="upcoming">
+        <h2>Upcoming Events</h2>
+        <div class="events-grid">
+          <div class="news-item" data-category="upcoming" data-aos="fade-up">
+            <div class="news-image">
+              <img src="Assets/Images/Soccer Team.jpg" alt="Sports Day">
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div class="news-content">
+              <div class="news-date">March 15, 2024</div>
+              <h3>Annual Sports Day</h3>
+              <p>Join us for our annual sports day celebration featuring track and field events, team sports, and more.</p>
+              <div class="event-details">
+                <p><i class="fas fa-clock"></i> 9:00 AM - 4:00 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> School Sports Ground</p>
+              </div>
             </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+
+          <div class="news-item" data-category="upcoming" data-aos="fade-up">
+            <div class="news-image">
+              <img src="Assets/Images/School event.jpg" alt="Graduation">
+            </div>
+            <div class="news-content">
+              <div class="news-date">April 5, 2024</div>
+              <h3>Graduation Ceremony</h3>
+              <p>Celebrating the achievements of our graduating class of 2024.</p>
+              <div class="event-details">
+                <p><i class="fas fa-clock"></i> 2:00 PM - 5:00 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> School Auditorium</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more upcoming events inside .events-grid -->
+        </div>
+      </section>
+
+      <!-- Past Events -->
+      <section class="past-events" data-section="past">
+        <h2>Past Events</h2>
+        <div class="events-grid">
+          <div class="news-item" data-category="past" data-aos="fade-up">
+            <div class="news-image">
+              <img src="Assets/Images/A level Science students.jpg" alt="Science Fair">
+            </div>
+            <div class="news-content">
+              <div class="news-date">January 05, 2025</div>
+              <h3>Science Fair 2025</h3>
+              <p>Students showcased their innovative science projects and experiments.</p>
+              <a href="Gallery.html" class="read-more">View Gallery</a>
+            </div>
+          </div>
+
+          <div class="news-item" data-category="past" data-aos="fade-up">
+            <div class="news-image">
+              <img src="Assets/Images/Annual Day.jpg" alt="Annual Day">
+            </div>
+            <div class="news-content">
+              <div class="news-date">January 19, 2025</div>
+              <h3>Annual Cultural Day</h3>
+              <p>A spectacular showcase of talent through music, dance, and drama performances.</p>
+              <a href="Gallery.html" class="read-more">View Gallery</a>
+            </div>
+          </div>
+          <!-- Add more past events here -->
+           <div class="news-item" data-category="past" data-aos="fade-up">
+            <div class="news-image">
+              <img src="Assets/Images/School event.jpg" alt="Annual Day">
+            </div>
+            <div class="news-content">
+              <div class="news-date">January 19, 2025</div>
+              <h3>Annual Cultural Day</h3>
+              <p>A spectacular showcase of talent through music, dance, and drama performances.</p>
+              <a href="Gallery.html" class="read-more">View Gallery</a>
+            </div>
+        </div>
+      </section>
+
+      <!-- Announcements -->
+      <section class="announcements" data-section="announcements">
+        <h2>Announcements</h2>
+        <div class="announcements-grid">
+          <div class="news-item" data-category="announcements" data-aos="fade-up">
+            <div class="announcement-image">
+              <img src="Assets/Images/parent-meeting.jpg" alt="Parent Meeting">
+            </div>
+            <div class="news-content announcement">
+              <div class="news-date">February 1, 2025</div>
+              <h3>Parent-Teacher Meeting</h3>
+              <p>Schedule for the upcoming parent-teacher meeting has been released.</p>
+              <a href="#" class="read-more">View Schedule</a>
+            </div>
+          </div>
+          <div class="announcements-grid">
+          <div class="news-item" data-category="announcements" data-aos="fade-up">
+            <div class="announcement-image">
+              <img src="Assets/Images/Trip time.jpg" alt="Parent Meeting">
+            </div>
+            <div class="news-content announcement">
+              <div class="news-date">February 1, 2025</div>
+              <h3>Parent-Teacher Meeting</h3>
+              <p>Schedule for the upcoming parent-teacher meeting has been released.</p>
+              <a href="#" class="read-more">View Schedule</a>
+            </div>
+          </div>
+          <div class="announcements-grid">
+          <div class="news-item" data-category="announcements" data-aos="fade-up">
+            <div class="announcement-image">
+              <img src="Assets/Images/kabaka's Run arrival.jpg" alt="Parent Meeting">
+            </div>
+            <div class="news-content announcement">
+              <div class="news-date">February 1, 2025</div>
+              <h3>Parent-Teacher Meeting</h3>
+              <p>Schedule for the upcoming parent-teacher meeting has been released.</p>
+              <a href="#" class="read-more">View Schedule</a>
+            </div>
+          </div>
+          <!-- Add more announcements here -->
+        </div>
+      </section>
+
+      <!-- School Calendar -->
+      <section class="school-calendar" data-section="calendar">
+        <h2>School Calendar</h2>
+
+        <!-- Optional dynamic events container for JS (kept to preserve functionality) -->
+        <div id="calendar" aria-label="dynamic-events" style="display:none;"></div>
+
+        <div class="calendar-tabs">
+          <button class="calendar-tab active" data-term="term1">First Term</button>
+          <button class="calendar-tab" data-term="term2">Second Term</button>
+          <button class="calendar-tab" data-term="term3">Third Term</button>
+        </div>
+
+        <div class="calendar-content">
+          <div class="term-calendar active" id="term1">
+            <div class="calendar-header">
+              <h3>First Term 2024</h3>
+              <div class="term-dates"><span><i class="fas fa-calendar"></i> January 15 - April 12, 2024</span></div>
+            </div>
+            <div class="calendar-grid">
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">Jan</span><span class="day">15</span></div>
+                <div class="event-details">
+                  <h4>School Opening</h4>
+                  <p><i class="fas fa-clock"></i> 8:00 AM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Main Campus</p>
                 </div>
+              </div>
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">Mar</span><span class="day">1</span></div>
+                <div class="event-details">
+                  <h4>Mid-term Break</h4>
+                  <p><i class="fas fa-clock"></i> All Day</p>
+                  <p><i class="fas fa-calendar"></i> March 1-15</p>
+                </div>
+              </div>
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">Apr</span><span class="day">12</span></div>
+                <div class="event-details">
+                  <h4>End of Term</h4>
+                  <p><i class="fas fa-clock"></i> 12:00 PM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Main Campus</p>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 St. Augustines College. All rights reserved.</p>
-        </div>
-    </footer>
+          </div>
 
-    <script src="news.js"></script>
+          <div class="term-calendar" id="term2">
+            <div class="calendar-header">
+              <h3>Second Term 2024</h3>
+              <div class="term-dates"><span><i class="fas fa-calendar"></i> May 6 - August 9, 2024</span></div>
+            </div>
+            <div class="calendar-grid">
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">May</span><span class="day">6</span></div>
+                <div class="event-details">
+                  <h4>School Opening</h4>
+                  <p><i class="fas fa-clock"></i> 8:00 AM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Main Campus</p>
+                </div>
+              </div>
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">Jul</span><span class="day">1</span></div>
+                <div class="event-details">
+                  <h4>Mid-term Break</h4>
+                  <p><i class="fas fa-clock"></i> All Day</p>
+                  <p><i class="fas fa-calendar"></i> July 1-15</p>
+                </div>
+              </div>
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">Aug</span><span class="day">9</span></div>
+                <div class="event-details">
+                  <h4>End of Term</h4>
+                  <p><i class="fas fa-clock"></i> 12:00 PM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Main Campus</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="term-calendar" id="term3">
+            <div class="calendar-header">
+              <h3>Third Term 2024</h3>
+              <div class="term-dates"><span><i class="fas fa-calendar"></i> September 2 - November 29, 2024</span></div>
+            </div>
+            <div class="calendar-grid">
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">Sep</span><span class="day">2</span></div>
+                <div class="event-details">
+                  <h4>School Opening</h4>
+                  <p><i class="fas fa-clock"></i> 8:00 AM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Main Campus</p>
+                </div>
+              </div>
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">Oct</span><span class="day">15</span></div>
+                <div class="event-details">
+                  <h4>Mid-term Break</h4>
+                  <p><i class="fas fa-clock"></i> All Day</p>
+                  <p><i class="fas fa-calendar"></i> October 15-29</p>
+                </div>
+              </div>
+              <div class="calendar-event">
+                <div class="event-date"><span class="month">Nov</span><span class="day">29</span></div>
+                <div class="event-details">
+                  <h4>End of Term</h4>
+                  <p><i class="fas fa-clock"></i> 12:00 PM</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Main Campus</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.calendar-content -->
+      </section>
+    </section> <!-- /.news-container -->
+  </main>
+
+  <!-- Single, shared Video Modal (remove duplicates!) -->
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal" aria-label="Close">&times;</span>
+      <div class="video-player">
+        <video id="modalVideo" controls></video>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-phone"></i> +256 414 372593</p>
+        <p><i class="fas fa-envelope"></i> info@staugustines.edu</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 St. Augustines College. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Scripts -->
+  <script src="news.js"></script>
 </body>
 </html>
